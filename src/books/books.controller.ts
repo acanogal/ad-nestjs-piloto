@@ -34,7 +34,7 @@ export class BooksController {
   //   }
   @Get()
   @ApiOperation({ summary: 'Get all books' })
-  findAll(@Req() request: Request) {
+  async findAll(@Req() request: Request): Promise<BookDto[]> {
     return this.booksService.findAll(request.query);
   }
   @Get(':bookId')

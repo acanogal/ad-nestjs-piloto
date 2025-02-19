@@ -1,28 +1,28 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity('books')
 export class Book {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: false })
   title: string;
 
-  @Column()
+  @Column({ nullable: false })
   genre: string;
 
-  @Column('text')
+  @Column('text', { nullable: false })
   description: string;
 
-  @Column()
+  @Column({ nullable: false })
   author: string;
 
-  @Column()
+  @Column({ nullable: false })
   publisher: string;
 
-  @Column()
+  @Column({ nullable: false })
   pages: number;
 
-  @Column()
+  @Column({ nullable: false })
   image_url: string;
 }

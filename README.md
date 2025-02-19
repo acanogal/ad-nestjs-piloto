@@ -34,6 +34,11 @@ $ npm install
 
 ## Compile and run the project
 
+Before you run the project must be install docker. After you must be install postgres with this command:
+```bash
+docker compose up -d
+```
+
 ```bash
 # development
 $ npm run start
@@ -44,6 +49,12 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+When you have started the app, you can test the app using the urls:
+- http://localhost:3000/api/     -> Api with Swagger
+- http://localhost:3000/api/v1   -> Hello World!
+- http://localhost:3000/api/books 
+-  etc.... 
 
 ## Run tests
 

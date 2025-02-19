@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS books (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    genre VARCHAR(100),
-    description TEXT,
-    author VARCHAR(255),
-    publisher VARCHAR(255),
-    pages INTEGER,
-    image_url VARCHAR(255)
+    genre VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    publisher VARCHAR(255) NOT NULL,
+    pages INTEGER NOT NULL,
+    image_url VARCHAR(255) NOT NULL
 );
 INSERT INTO books (
         title,
